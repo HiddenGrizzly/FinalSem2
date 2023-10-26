@@ -1,0 +1,52 @@
+#displayProducts {
+    min-height: 65vh;
+}
+
+.product-image {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-detail p {
+    padding: 2rem;
+    margin: auto;
+}
+
+.quantity-control {
+    margin: auto;
+    padding: 2rem;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Banner */
+#banner {
+    min-height: 110vh;
+    background-image: url("/image/banner.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#banner #bannerText {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    color: #ffffff;
+}
+
+#myNavbar {
+    transition: all 0.3s ease-in-out;
+}
+
+#shoppingCart {
+    min-width: 700px;
+}

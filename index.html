@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>WALKZ</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md sticky-top bg-light navbar-light m-0 pt-3 pb-3" id="myNavbar">
+        <a class="navbar-brand col-3 text-center p-0 m-0" href="#">WALKZ</a>
+        <button class="navbar-toggler col-sm-2" type="button" data-toggle="collapse" data-target="#myLinkGroup" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-9 p-0 m-0" id="myLinkGroup">
+            <ul class="navbar-nav col-8 justify-content-between p-0 m-0">
+                <li class="nav-item m-auto">
+                    <a class="nav-link text-center" href="#">SHOP</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a class="nav-link text-center" href="#">BLOG</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a class="nav-link text-center" href="#">ABOUT US</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a class="nav-link text-center" href="#">CONTACT US</a>
+                </li>
+            </ul>
+            <div class="row col-4 justify-content-center" id="myBtnGroup">
+                <div class="col" id="searchBtn">
+                    <!-- Button to Open the Search Modal -->
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#mySearchModal">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="col" id="userBtn">
+                    <button type="button" class="btn btn-light">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+                <div class="col" id="cartBtn">
+                    <!-- Button to Open the Cart Modal -->
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myCartModal">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- The Search Modal -->
+    <div class="modal fade" id="mySearchModal">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content"> 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Search our products:</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+  
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="#" class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="search" id="search" class="">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-sm">Search</button>
+                    </form>
+                </div>
+  
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                </div>
+  
+            </div>
+        </div>
+    </div>
+    <!-- The Cart Modal -->
+    <div class="modal fade" id="myCartModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content"> 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Your shopping cart:</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+  
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="" id="displayProducts">
+
+                    </div>
+                    <div class="" id="totalPrice">
+                        <h3>Total:</h3>
+                    </div>
+                </div>
+  
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                </div>
+  
+            </div>
+        </div>
+    </div>
+    <!--Banner-->
+    <div id="banner" class="container-fluid p-0 m-0 w-100">
+        <div class="display-3 w-50 h-75" id="bannerText">
+            <h3>Step into Style and Comfort with WALKZ Shoes!</h3>
+            <p>Discover a World of Trendy and Affordable Footwear.</p>
+        </div>
+    </div>
+    <!-- <div class="container" id="shoppingCart">
+        <div class="row" id="cartHeader">
+            <div class="col-10 text-center" id="cartHead">
+                <h2 class="display-4">Your shopping cart</h2>
+            </div>
+            <div class="col-2" id="cartClose">
+                <button><i class="fa fa-close display-4"></i></button>
+            </div>
+        </div>
+        <div class="row" id="cartBody">
+
+        </div>
+        <div class="row" id="cartFoot">
+            <div class="col-12 w-100 d-flex justify-content-between" id="total">
+                <strong class="w-25 text-center">Total:</strong>
+                <strong class="w-25 text-center">$</strong>
+            </div>
+            <div class="col-12 btn-group w-100">
+                <button class="btn btn-dark w-50">Check out</button>
+                <button class="btn btn-light w-50">View cart</button>
+            </div>
+        </div>
+    </div> -->
+    <!--Script-->
+    <script src="index.js"></script>
+</body>
+</html>

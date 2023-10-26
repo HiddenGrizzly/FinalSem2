@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+#myNavbar {
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+}
+
+#myNavbar .mySearch {
+    border-radius: 25px !important;
+}
+
+#myNavbar .myIconColor {
+    color: #ffffff;
+}
+
+#myNavbar button {
+    border: none;
+}
+
+#myNavbar ul li a {
+    position: relative;
+    text-decoration: none;
+}
+  
+#myNavbar ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    bottom: 7px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#myNavbar ul li a.scrolled::before {
+    background-color: #000000;
+}
+  
+#myNavbar ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*Cart*/
+/* Cart Styles */
+.cart {
+    position: fixed;
+    top: 11%;
+    right: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s;
+    z-index: 1;
+    overflow-y: auto;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .close-cart-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .cart-items {
+    padding: 10px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-total {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+
+/* Banner */
+#banner {
+    min-height: 110vh;
+    background-image: url("/image/banner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#banner #bannerText {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: #ffffff;
+}
